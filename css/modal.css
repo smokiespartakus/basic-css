@@ -1,0 +1,23 @@
+#modal {
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background: rgba(0,0,0,.6);
+	z-index: 100;
+	top: 0;
+	left: 0;
+	display: none;
+}
+#modal-inner {
+	position: absolute;
+	width: 500px;
+	min-height: 200px;
+	background: #fff;
+	color: #111;
+	box-shadow: 0 0 10px rgba(0,0,0,.6);
+	margin: auto;
+	top: 100px;
+	left: 0;
+	right: 0;
+	padding: 10px;
+}
