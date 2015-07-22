@@ -1,3 +1,4 @@
+
 .hidden { visibility: hidden; } 
 .hide { display: none; }
 
@@ -17,6 +18,7 @@
 .float-left { float: left; }
 .float-right { float: right; }
 .float-normal { float: normal; }
+.clear { clear: both; }
 
 ib, .ib { display: inline-block; }
 
@@ -52,3 +54,9 @@ ib, .ib { display: inline-block; }
 .pad10-bottom { padding-bottom: 10px; }
 .pad10-left { padding-left: 10px; }
 .pad10-right { padding-right: 10px; }
+
+.valign-top { vertical-align: top; }
+.valign-ttop { vertical-align: text-top; }
+.valign-middle { vertical-align: middle; }
+.valign-tbottom { vertical-align: text-bottom; }
+.valign-bottom { vertical-align: bottom; }
