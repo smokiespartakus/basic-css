@@ -2,7 +2,7 @@
 	position: fixed;
 	height: 100%;
 	width: 100%;
-	background: rgba(0,0,0,.6);
+	background: rgba(0,0,0,.8);
 	z-index: 100;
 	top: 0;
 	left: 0;
@@ -14,10 +14,41 @@
 	min-height: 200px;
 	background: #fff;
 	color: #111;
-	box-shadow: 0 0 10px rgba(0,0,0,.6);
+	box-shadow: 0 0 10px rgba(0,0,0,.8);
 	margin: auto;
 	top: 100px;
 	left: 0;
 	right: 0;
 	padding: 10px;
+}
+#modal-close-btn {
+	width: 24px;
+	height: 24px;
+	background: #700;
+	border-radius: 2px;
+	position: absolute;
+	top: 3px;
+	right: 3px;
+	cursor: pointer;
+}
+#modal-close-btn:active,
+#modal-close-btn:hover {
+	background: #f00;
+}
+#modal-close-btn:before,
+#modal-close-btn:after {
+	content: '';
+	position: absolute;
+	width: 4px;
+	height: 16px;
+	transform: rotate(45deg);
+	background: #fff;
+	margin: auto;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+#modal-close-btn:after {
+	transform: rotate(-45deg);
 }

@@ -80,24 +80,30 @@ function jqajax(opts) {
 var modal = {
 	show: function() {
 		modal.init();
-		modal.modal.show();
+		modal.modal.fadeIn();
 		return modal;
 	},
 	hide: function() {
 		modal.init();
-		modal.modal.hide();
+		modal.modal.fadeOut();
 		return modal;
 	},
 	html: function(html) {
 		modal.init();
-		modal.modal.find('#modal-inner').html(html);
+		modal.modal.find('#modal-content').html(html);
 		return modal;
 	},
 	init: function() {
 		if(modal.inited) return;
 			modal.modal = $tpl('div', 'modal', '', [
-				$tpl('div', 'modal-inner')
-			]).appendTo('body');
+				$tpl('div', 'modal-inner', '', [
+					$tpl('div', 'modal-close-btn').click(modal.hide),
+					$tpl('div', 'modal-content')
+				])
+			]).click(function(e) {
+				if($(e.target).attr('id') == 'modal')
+					modal.hide();
+			}).appendTo('body');
 		modal.inited = true;
 		return modal;
 	},
